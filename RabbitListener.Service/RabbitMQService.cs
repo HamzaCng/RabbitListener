@@ -7,30 +7,28 @@ namespace RabbitListener.Service
 {
     internal class RabbitMQService : IMQService
     {
-        IConnection _connection;
+        IModel _channel;
 
         public RabbitMQService(RabbitMQConfigModel config)
         {
             var factory = new ConnectionFactory { HostName = config.HostName, UserName = config.UserName, Password = config.Password };
-            _connection = factory.CreateConnection();
+            var connection = factory.CreateConnection();
+            _channel = connection.CreateModel();
         }
 
-        public RabbitMQService(IConnection connection)
+        public RabbitMQService(IModel channel)
         {
-            _connection = connection;   
+            _channel = channel;   
         }
 
         public void CreateListener(string queueName, EventHandler<BasicDeliverEventArgs> received)
-        {
+        {          
 
-            IModel channel = _connection.CreateModel();
-
-            var consumer = new EventingBasicConsumer(channel);
+            var consumer = new EventingBasicConsumer(_channel);
 
             consumer.Received += received;
 
-            channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
-
+            _channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
         }
     }
 }

@@ -13,13 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F09A6D96-D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0A956FDF-A300-4961-81DA-A25946D3B4A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitListener.Test", "RabbitListener.Test\RabbitListener.Test.csproj", "{299645D9-9146-48F8-9A1D-9332CCDD54ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitListener.Test", "RabbitListener.Test\RabbitListener.Test.csproj", "{299645D9-9146-48F8-9A1D-9332CCDD54ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitListener.Core.Test", "RabbitListener.Core.Test\RabbitListener.Core.Test.csproj", "{A5DD55A7-37A6-4689-B1C2-6EF264617B36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitListener.Core.Test", "RabbitListener.Core.Test\RabbitListener.Core.Test.csproj", "{A5DD55A7-37A6-4689-B1C2-6EF264617B36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitListener.Service.Test", "RabbitListener.Service.Test\RabbitListener.Service.Test.csproj", "{F74A768B-6521-4238-888B-21B4EA738DF4}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Fakes.DotNetStandard", "..\..\..\Desktop\RabbitMQ.Fakes.DotNetStandard\RabbitMQ.Fakes.DotNetStandard.csproj", "{6AF361AE-E132-4492-B597-970A8D7EACC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitListener.Service.Test", "RabbitListener.Service.Test\RabbitListener.Service.Test.csproj", "{F74A768B-6521-4238-888B-21B4EA738DF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +49,6 @@ Global
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

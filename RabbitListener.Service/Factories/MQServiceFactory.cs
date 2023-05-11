@@ -16,9 +16,14 @@ namespace RabbitListener.Service.Factories
             return new RabbitMQService(config);
         }
 
-        public static IMQService CreateRabbitMQService(IConnection connection)
+        /// <summary>
+        /// For Test
+        /// </summary>
+        /// <param name="channel"></param>
+        /// <returns></returns>
+        public static IMQService CreateRabbitMQService(IModel channel)
         {
-            return new RabbitMQService(connection);
+            return new RabbitMQService(channel);
         }
 
         //public static IMQService CreateKafkaMQService(KafkaMQConfigModel config)
