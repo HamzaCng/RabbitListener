@@ -44,7 +44,7 @@ namespace RabbitListener.Service.Test
 
                 ServiceName = "RabbitListener",
                 Url = url,
-                StatusCode = "Bad URL Address!",
+                StatusCode = "Broken URL Address!",
             };
 
             var result = await service.GetStatusCodeAsync(url);

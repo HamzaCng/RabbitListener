@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitListener.Core.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitListener.Service.Test", "RabbitListener.Service.Test\RabbitListener.Service.Test.csproj", "{F74A768B-6521-4238-888B-21B4EA738DF4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Fakes.DotNetStandard", "..\..\..\Desktop\RabbitMQ.Fakes.DotNetStandard\RabbitMQ.Fakes.DotNetStandard.csproj", "{6AF361AE-E132-4492-B597-970A8D7EACC8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F74A768B-6521-4238-888B-21B4EA738DF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF361AE-E132-4492-B597-970A8D7EACC8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

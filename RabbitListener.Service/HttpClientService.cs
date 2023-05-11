@@ -28,7 +28,7 @@ namespace RabbitListener.Service
                     {
                         ServiceName = "RabbitListener",
                         Url = url,
-                        StatusCode = "Bad URL Address!",
+                        StatusCode = "Broken URL Address!",
                     };
                 }
 

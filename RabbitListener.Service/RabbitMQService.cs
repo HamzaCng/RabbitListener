@@ -5,18 +5,25 @@ using RabbitMQ.Client.Events;
 
 namespace RabbitListener.Service
 {
-    internal class RabbitMQService : IRabbitMQService
+    internal class RabbitMQService : IMQService
     {
-        private ConnectionFactory _factory { get; }
+        IConnection _connection;
+
         public RabbitMQService(RabbitMQConfigModel config)
         {
-            _factory = new ConnectionFactory { HostName = config.HostName, UserName = config.UserName, Password = config.Password };
+            var factory = new ConnectionFactory { HostName = config.HostName, UserName = config.UserName, Password = config.Password };
+            _connection = factory.CreateConnection();
+        }
+
+        public RabbitMQService(IConnection connection)
+        {
+            _connection = connection;   
         }
 
         public void CreateListener(string queueName, EventHandler<BasicDeliverEventArgs> received)
         {
-            IConnection connection = _factory.CreateConnection();
-            IModel channel = connection.CreateModel();
+
+            IModel channel = _connection.CreateModel();
 
             var consumer = new EventingBasicConsumer(channel);
 

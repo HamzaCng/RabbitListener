@@ -3,7 +3,7 @@ using RabbitMQ.Client.Events;
 
 namespace RabbitListener.Service.Interfaces
 {
-    public interface IRabbitMQService
+    public interface IMQService
     {
         void CreateListener(string queueName, EventHandler<BasicDeliverEventArgs> received);
     }

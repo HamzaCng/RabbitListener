@@ -6,7 +6,6 @@ using RabbitListener.Service.Interfaces;
 using RabbitMQ.Client.Events;
 using System.Text;
 
-
 #region Config
 
 IConfiguration config = new ConfigurationBuilder()
@@ -19,7 +18,7 @@ var rabbitMqConf = config.GetRequiredSection("RabbitMQ").Get<RabbitMQConfigModel
 
 #region Fields
 
-IRabbitMQService rabbitMQService = RabbitMQServiceFactory.CreateRabbitMQService(rabbitMqConf);
+IMQService rabbitMQService = MQServiceFactory.CreateRabbitMQService(rabbitMqConf);
 
 #endregion
 
