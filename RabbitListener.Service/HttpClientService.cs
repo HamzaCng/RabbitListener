@@ -18,8 +18,12 @@ namespace RabbitListener.Service
 
                 try
                 {
-                    var request = await client.GetAsync(url);
-                    result.StatusCode = request.StatusCode.ToString();
+                    //Old Ver.
+                    //var request = await client.GetAsync(url);
+                    //result.StatusCode = request.StatusCode.ToString();
+
+                    var request = client.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+                    result.StatusCode = request.Result.StatusCode.ToString();                    
 
                 }
                 catch (Exception)
